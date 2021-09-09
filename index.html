@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="bg-overlay hidden"></div>
+
+    <div class="title">
+      <h1>The Library</h1>
+      <p>where you can keep track of all your readings</p>
+    </div>
+
+    <div class="add-btn-container">
+      <button id="new-book-btn">
+        <span style="font-size: 18px">&#43;</span> Add book
+      </button>
+    </div>
+
+    <form action="#" id="book-form" class="hidden">
+      <span class="close">&times;</span>
+      <div class="book-input">
+        <div class="book-input-name">
+          <input type="text" id="book-name" placeholder="Title" />
+        </div>
+
+        <div class="book-input-author">
+          <input type="text" id="book-author" placeholder="Author" />
+        </div>
+
+        <div class="book-input-pages">
+          <input type="text" id="book-pages" placeholder="Pages" />
+        </div>
+
+        <div class="status-read">
+          <label for="yes-read">Have you read it?</label>
+          <input type="checkbox" id="yes-read" />
+        </div>
+
+        <button id="add-book-btn">Add Book</button>
+      </div>
+    </form>
+
+    <div class="container"></div>
+
+    <!-- <div class="book-card">
+      <div class="book-title">Harry Potter and the Prisoner of Azkaban</div>
+      <div>Selena Gomez</div>
+      <div>300 Pages</div>
+      <div>Done read</div>
+      <button class="book-card-btn">Remove</button>
+    </div> -->
+
+    <script src="script.js"></script>
+  </body>
+</html>

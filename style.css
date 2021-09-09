@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(207, 230, 230);
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: "Roboto", sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.bg-overlay {
+  background-color: rgba(0, 0, 0, 0.452);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: auto;
+}
+
+.title {
+  margin-top: 3.5%;
+  margin-bottom: 0.5%;
+  text-align: center;
+  color: rgb(69, 69, 69);
+  letter-spacing: 2px;
+}
+
+.title > h1 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 3em;
+}
+
+.title > p {
+  font-size: 1em;
+}
+/*book form popup */
+
+#book-form {
+  position: absolute;
+  z-index: 2;
+  left: 38%;
+  top: 20%;
+  background-color: white;
+  width: 25%;
+  padding: 5% 3%;
+  border-radius: 2%;
+  color: rgb(99, 99, 99);
+}
+
+.book-input > [class^="book-"] > input {
+  padding: 4% 10%;
+  width: 100%;
+  margin-bottom: 7%;
+  font-size: 1em;
+}
+
+.status-read {
+  font-size: 1.1em;
+  margin-bottom: 7%;
+  margin-left: 1%;
+}
+
+/* buttons */
+
+button:hover {
+  cursor: pointer;
+}
+
+#add-book-btn {
+  padding: 3.5% 7%;
+  border: none;
+  background-color: rgb(234, 237, 237);
+  color: rgb(99, 99, 99);
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+#add-book-btn:hover {
+  background-color: rgb(245, 241, 241);
+}
+
+.add-btn-container {
+  text-align: center;
+}
+
+#new-book-btn {
+  padding: 10px;
+  font-size: 1em;
+  width: 10%;
+  margin-left: 2%;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid rgb(220, 224, 227);
+  color: rgb(99, 99, 99);
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+#new-book-btn:hover {
+  background-color: rgb(225, 241, 247);
+}
+
+.close {
+  position: absolute;
+  right: 4%;
+  top: 2%;
+  font-size: 25px;
+  color: #aaa;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 2% auto;
+}
+
+/* Book cards */
+.book-card {
+  background-color: rgb(255, 253, 253);
+  border: rgb(223, 222, 222) 1px solid;
+  width: 20%;
+  height: 30%;
+  border-radius: 6px;
+  padding: 3%;
+  font-size: 1.1em;
+  margin-top: 2%;
+  margin-left: 4%;
+  line-height: 35px;
+  text-align: center;
+  color: rgb(91, 91, 91);
+}
+
+.book-title {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-bottom: 2%;
+  font-family: "Bebas Neue", cursive;
+  color: rgb(69, 69, 69);
+}
+
+.book-card-btn-remove {
+  padding: 2%;
+  border: none;
+  background-color: white;
+  color: rgb(236, 69, 69);
+  cursor: pointer;
+  font-weight: bold;
+}
+.book-card-btn-remove:hover {
+  font-size: 0.8em;
+}
+
+.book-card-btn-update {
+  padding: 2%;
+  border: none;
+  background-color: white;
+  color: rgb(69, 69, 69);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .book-card {
+    width: 90%;
+    margin-bottom: 1.5%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #new-book-btn {
+    width: 115px;
+    padding: 8px;
+  }
+}
